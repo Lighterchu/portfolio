@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+body {
+  background-color:rgb(63, 56, 56)
+}
+
+.nav-bar{
+  background-color:aqua;
+  justify-content:space-between;
+  display:flex;
+
+  width: 100%;
+  
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
