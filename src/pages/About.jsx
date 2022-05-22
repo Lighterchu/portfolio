@@ -1,9 +1,13 @@
 import React from 'react'
+import AboutMe from '../components/AboutMe';
 
 function About() {
   return (
-    <div>
-        This is the about page
+    <div className="about-container">
+        <hr />
+        <h1>Hi I am Benjamin</h1>
+        <AboutMe/>
+        <hr />
     </div>
   )
 }

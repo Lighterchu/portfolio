@@ -9,9 +9,30 @@ body {
 .nav-bar{
   background-color:aqua;
   justify-content:space-between;
+
+  font-family: 'Times New Roman', Times, serif;
+  font-size:25px;
   display:flex;
 
   width: 100%;
+  
+}
+
+.about-container {
+  color:rgb(205, 20, 20);
+  text-align:center;
+  align-items: center;
+  
+}
+
+.about-card {
+  color:rgb(210, 208, 216);
+  background-color: rgba(255, 0, 0, 0.439);
+
+  width:30%;
+
+  text-align:center;
+  align-items: center;
   
 }
 
