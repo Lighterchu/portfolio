@@ -3,13 +3,10 @@ import React from 'react'
 function Cards({title, info, points}){
     let mainPoints
 
-    let handleClick = () => {
-    //    TOOD
-    // need to add function when click the image and show more detail
-    }
+   
 
     if(points){
-        mainPoints = points.map(point => <li onClick={handleClick}>{point}</li>)
+        mainPoints = points.map(point => <li>{point}</li>)
     }
     
     return (

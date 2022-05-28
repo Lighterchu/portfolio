@@ -3,7 +3,7 @@ import React from 'react'
 function Projects() {
   return (
     <div>
-        <h1>This should work</h1>
+        <a href="https://github.com/bennyboy743">My projects</a>
     </div>
   )
 }
