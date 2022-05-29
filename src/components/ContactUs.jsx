@@ -6,13 +6,13 @@ const ContactUs = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('gmail', 'template_ri5hqf8', form.current, 'QwlcPt-r8ENBM3S6Q')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    alert("have sent email")
+    // emailjs.sendForm('gmail', 'template_ri5hqf8', form.current, 'QwlcPt-r8ENBM3S6Q')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
       e.target.reset();
   };
 
@@ -20,6 +20,8 @@ const ContactUs = () => {
     <form ref={form} className={"contact-container"} onSubmit={sendEmail}>
       <label>Name</label>
       <input type="text" name="user_name" />
+      <br/>
+      <br/>
       <label>Email</label>
       <input type="email" name="user_email" />
       <br/>
@@ -27,7 +29,7 @@ const ContactUs = () => {
         <label>Message</label>
         <textarea name="message" />
       </div>
-      <input type="submit" value="Send" />
+      <input type="submit" id="sendBtn" value="Send" />
     </form>
   );
 };
