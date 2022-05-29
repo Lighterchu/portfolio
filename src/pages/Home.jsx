@@ -1,13 +1,14 @@
 import React from 'react'
 import Cards from '../components/Cards';
-import Contact from '../components/Contact';
+import ContactUs from '../components/ContactUs';
 
 function Home() {
   return (
     <div className="home-container">
        <Cards title="Ben" info={"Im a boot camp student as well a self taught programmer"} />
        <div>
-           <Contact />
+           <ContactUs />
+
        </div>
     </div>
   )

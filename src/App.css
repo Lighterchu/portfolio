@@ -29,8 +29,27 @@ body {
 .contact-container{
   margin-top:5%;
   margin-left: 25%;
+  padding-top:1%;
+  padding-bottom:1%;
   width: 50%;
   height: 10%;
+
+  border-radius: 25px;
+  border: 2px solid #f1f6ea;
+
+  background-color:rgba(255, 255, 255, 0.3);
+}
+.message-container{
+  margin-top:5%;
+  margin-left: 25%;
+  padding-top:1%;
+  padding-bottom:1%;
+  width: 50%;
+  height: 10%;
+
+  border-radius: 25px;
+  border: 2px solid #f1f6ea;
+
   background-color:rgba(255, 255, 255, 0.3);
 }
 
