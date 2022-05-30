@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Cards({title, info, points,image, color, changePos}){
+function Cards({title, info, link, points,image, color, changePos}){
     let mainPoints
 
    
@@ -17,6 +17,7 @@ function Cards({title, info, points,image, color, changePos}){
         </Title>
         {image ? <img alt="loading"/> : null}
         <p>{info}</p>
+        <a>{link}</a>
        {points ? mainPoints : ""}
       </Wrapper>
     )
