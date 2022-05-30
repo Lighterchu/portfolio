@@ -12,7 +12,7 @@ function Cards({title, info, points,image}){
     return (
       <div className="cards-container">
         <h1>{title}</h1>
-        {image ? <img src={url("img_tree.gif") } alt="loading"/> : null}
+        {image ? <img alt="loading"/> : null}
         <p>{info}</p>
        {points ? mainPoints : ""}
       </div>
