@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Cards({title, info, points}){
+function Cards({title, info, points,image}){
     let mainPoints
 
    
@@ -12,8 +12,9 @@ function Cards({title, info, points}){
     return (
       <div className="cards-container">
         <h1>{title}</h1>
+        {image ? <img src={url("img_tree.gif") } alt="loading"/> : null}
         <p>{info}</p>
-        {points ? mainPoints : ""}
+       {points ? mainPoints : ""}
       </div>
     )
 }
