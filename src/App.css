@@ -5,11 +5,20 @@
 body {
   background-color:rgb(101, 96, 96)
 }
+a {
+  color:white;
+  text-decoration:none;
+  
+}
+
+a:hover {
+  color:red;
+}
 
 .nav-bar{
   justify-content:space-between;
   font-family: 'Times New Roman', Times, serif;
-  font-size:25px;
+  font-size:30px;
 
   
   
@@ -84,23 +93,7 @@ body {
 
 .cards-container {
   
-  width: 30%;
   
-
-  color:rgb(233, 233, 233);
-  background-color: rgba(255, 64, 0, 0.633);
-
-  border-radius: 25px;
-  border: 2px solid #f1f6ea;
-
-  text-align:center;
-  align-items: center;
-
-  font-family: 'Times New Roman', Times, serif;
-  font-size:20px;
-
-  margin-left:35%;
-  margin-top:2%;
 }
 
 .cards-container:hover{
@@ -178,11 +171,13 @@ body {
   border-radius: 25px;
   border: 2px solid #f1f6ea;
 
-  justify-content:space-between;
+  /* justify-content:space-between; */
   
 
   /* text-align:center; */
-  /* display: flex; */
+  display: flex;
+  flex-wrap: wrap;
+  
 
   background-color:rgba(80, 76, 76, 0.585);
 }
