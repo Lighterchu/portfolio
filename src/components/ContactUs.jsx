@@ -9,13 +9,13 @@ const ContactUs = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    // emailjs.sendForm('gmail', 'template_ri5hqf8', form.current, 'QwlcPt-r8ENBM3S6Q')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
-    //   e.target.reset();
+    emailjs.sendForm('gmail', 'template_ri5hqf8', form.current, 'QwlcPt-r8ENBM3S6Q')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
       SetSent(!Sent)
   };
 
