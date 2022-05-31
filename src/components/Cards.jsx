@@ -17,7 +17,7 @@ function Cards({title, info, link, points,image, color, changePos}){
         </Title>
         {image ? <img alt="loading"/> : null}
         <p>{info}</p>
-        <a>{link}</a>
+        {/* <a>{link}</a> */}
        {points ? mainPoints : ""}
       </Wrapper>
     )
