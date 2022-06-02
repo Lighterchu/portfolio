@@ -26,6 +26,7 @@ function Cards({title,data,info, link, points,image, color, changePos}){
 
         // console.log(project)
         names.push(info.name)
+        return data
       })
     }
     // console.log(data)
