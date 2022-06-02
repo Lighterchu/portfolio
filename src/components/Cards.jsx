@@ -4,8 +4,8 @@ import styled from 'styled-components'
 function Cards({title,data,info, link, points,image, color, changePos}){
     let mainPoints
     let names = []
-    let language = []
-    let project = {}
+    
+    
     if(data){
       
       // data.map((info) => {
@@ -15,13 +15,13 @@ function Cards({title,data,info, link, points,image, color, changePos}){
       //   }) 
       // })
 
-      data.filter(myRepo => myRepo["fork"] == false)
+      data.filter(myRepo => myRepo["fork"] === false)
       .map((info) => {
         // console.log(info)
-        project = {
-          name: info.name,
-          language: info.language
-        }
+        // project = {
+        //   name: info.name,
+        //   language: info.language
+        // }
        
 
         // console.log(project)
