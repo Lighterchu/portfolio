@@ -58,13 +58,13 @@ function Cards({title,data,info, link, points,image, color, changePos}){
         ) : 
         <BoxContainer changePos={changePos}>
           <Title color={color}>
-            {title}
+            {title && title ? title : "LOADING..."}
           </Title>
           <p>{info}</p>
           {points ? mainPoints : ""}
         </BoxContainer>
-        } 
-      </MainContainer>
+        }
+      </MainContainer> 
 
 
     )
