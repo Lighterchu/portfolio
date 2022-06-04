@@ -23,20 +23,20 @@ function Cards({title,data,info, link, points,image, color, changePos, grid}){
       })
     }
 
-    function colorOfSkill(name) {
-      name.map((info) => {
-        let language = info.language
+    // function colorOfSkill(name) {
+    //   name.map((info) => {
+    //     let language = info.language
         
-        let categoriesKeys = ''
-        if(language != null){
-          categoriesKeys = Object.keys(categories);
-          console.log(categoriesKeys)
-        } 
-        return
-      })
-      return holdingColor
-    }
-      changeSkillColor = colorOfSkill(names)
+    //     let categoriesKeys = ''
+    //     if(language != null){
+    //       categoriesKeys = Object.keys(categories);
+    //       console.log(categoriesKeys)
+    //     } 
+       
+    //   })
+    //   return holdingColor
+    // }
+    //   changeSkillColor = colorOfSkill(names)
      
     
    
@@ -48,7 +48,7 @@ function Cards({title,data,info, link, points,image, color, changePos, grid}){
       <MainContainer changePos={changePos} grid={grid}>
         {data && data ?  names.map((info) => 
           <BoxContainer>
-          <Title color={changeSkillColor}>
+          <Title color={}>
             {info.name}
           </Title>
           <p>{info.language}</p>
