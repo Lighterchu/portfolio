@@ -4,56 +4,33 @@ import styled from 'styled-components'
 function Cards({title,data,info, link, points,image, color, changePos}){
     let mainPoints
     let names = []
+    let string = ''
+    let date = ''
     
     
     if(data){
-      
-      // data.map((info) => {
-      //   console.log(info)
-      //   info.filter((notForked) =>{
-          
-      //   }) 
-      // })
-
-      data.filter(myRepo => myRepo["fork"] === false)
+     data.filter(myRepo => myRepo["fork"] === false)
       .map((info) => {
-        // console.log(info)
-        // project = {
-        //   name: info.name,
-        //   language: info.language
-        // }
-       
-
-        // console.log(project)
-        names.push(info.name)
+        
+        let date = info.created_at
+        names.push(info)
         return data
       })
     }
-    // console.log(data)
-
+   
     if(points){
         mainPoints = points.map(point => <li>{point}</li>)
     }
     
     return (
-      // <Wrapper changePos={changePos}>
-      //   <Title color={color}>
-      //     {title}
-      //   </Title>
-      //   {image ? <img alt="loading"/> : null}
-      //   <p>{info}</p>
-      //   {/* <a>{link}</a> */}
-      //  {points ? mainPoints : ""}
-      // </Wrapper>
-
-    
-
       <MainContainer>
         {data && data ?  names.map((info) => 
           <BoxContainer changePos={changePos}>
           <Title color={color}>
-            {info}
+            {info.name}
           </Title>
+          <p>{info.language}</p>
+          <p>{info.created_at}</p>
         </BoxContainer> 
         ) : 
         <BoxContainer changePos={changePos}>

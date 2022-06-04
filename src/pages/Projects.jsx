@@ -10,7 +10,7 @@ function Projects() {
   
  
   useEffect(() => {
-    fetch("https://api.github.com/users/Lighterchu/repos?per_page=100")
+    fetch("https://api.github.com/users/Lighterchu/repos?per_page=200")
     .then(res => res.json())
     .then(data => {
       SetAllData(data)
