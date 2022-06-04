@@ -48,7 +48,7 @@ function Cards({title,data,info, link, points,image, color, changePos, grid}){
       <MainContainer changePos={changePos} grid={grid}>
         {data && data ?  names.map((info) => 
           <BoxContainer>
-          <Title color={}>
+          <Title>
             {info.name}
           </Title>
           <p>{info.language}</p>
