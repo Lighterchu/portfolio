@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Cards from '../components/Cards';
 
-
 function Projects() {
 
   const [AllData, SetAllData] = useState('')
@@ -23,6 +22,7 @@ function Projects() {
   return (
     <div className="project-container">
       <Cards data={AllData} changePos={true} grid={true}/>
+     
     </div>
   )
 }
