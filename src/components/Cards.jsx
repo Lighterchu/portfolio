@@ -1,39 +1,62 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Cards({title,data,info, link, points,image, color, changePos}){
+function Cards({title,data,info, link, points,image, color, changePos, grid}){
     let mainPoints
     let names = []
-    let string = ''
-    let date = ''
+    const categories = {
+      "javascript": "red",
+      "css": "blue"
+      
+    }
+    let holdingColor = ''
+    let changeSkillColor = ''
+    // console.log(categoriesTest)
     
     
     if(data){
      data.filter(myRepo => myRepo["fork"] === false)
       .map((info) => {
-        
-        let date = info.created_at
         names.push(info)
         return data
       })
     }
+
+    function colorOfSkill(name) {
+      name.map((info) => {
+        let language = info.language
+        let movingToLowerCase = ''
+        let categoriesKeys = ''
+        if(language != null){
+          movingToLowerCase = language.toLowerCase()
+          
+          categoriesKeys = Object.keys(categories);
+          console.log(categoriesKeys)
+        } 
+        
+      })
+      return holdingColor
+    }
+      changeSkillColor = colorOfSkill(names)
+     
+    
    
     if(points){
         mainPoints = points.map(point => <li>{point}</li>)
     }
     
     return (
-      <MainContainer>
+      <MainContainer changePos={changePos} grid={grid}>
         {data && data ?  names.map((info) => 
-          <BoxContainer changePos={changePos}>
-          <Title color={color}>
+          <BoxContainer>
+          <Title color={changeSkillColor}>
             {info.name}
           </Title>
           <p>{info.language}</p>
           <p>{info.created_at}</p>
         </BoxContainer> 
         ) : 
-        <BoxContainer changePos={changePos}>
+        <BoxContainer>
           <Title color={color}>
             {title && title ? title : "LOADING..."}
           </Title>
@@ -64,6 +87,11 @@ const MainContainer = styled.div`
   text-align:center;
   align-items: center;
 
+  display:${({grid}) => grid ? "grid" : ''};
+  grid-template-columns:repeat(4,1fr);
+  grid-gap: 2rem;
+  grid-template-rows: 200px 150px;
+
   font-family: 'Times New Roman', Times, serif;
   font-size:20px;
 
@@ -86,10 +114,11 @@ const BoxContainer = styled.div`
   text-align:center;
   align-items: center;
 
+  
+
   font-family: 'Times New Roman', Times, serif;
   font-size:20px;
 
-  margin-left:${({changePos}) => !changePos ? "2%" : '34%'};
   margin-top:2%;
   margin-bottom:2% ;
 `;

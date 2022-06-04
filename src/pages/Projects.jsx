@@ -22,7 +22,7 @@ function Projects() {
 
   return (
     <div className="project-container">
-      <Cards data={AllData} />
+      <Cards data={AllData} changePos={true} grid={true}/>
     </div>
   )
 }
