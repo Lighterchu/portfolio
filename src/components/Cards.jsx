@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function Cards({title,data,info, link, points,image, color, changePos, grid}){
     let mainPoints
     let names = []
-    let movingToLowerCase = ''
+    
     const categories = {
       "javascript": "red",
       "css": "blue"
@@ -29,11 +29,10 @@ function Cards({title,data,info, link, points,image, color, changePos, grid}){
         
         let categoriesKeys = ''
         if(language != null){
-          movingToLowerCase = language.toLowerCase()
           categoriesKeys = Object.keys(categories);
           console.log(categoriesKeys)
         } 
-        
+        return
       })
       return holdingColor
     }
