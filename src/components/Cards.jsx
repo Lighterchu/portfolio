@@ -5,15 +5,7 @@ function Cards({title,data,info, link, points,image, color, changePos, grid}){
     let mainPoints
     let names = []
     
-    const categories = {
-      "javascript": "red",
-      "css": "blue"
-      
-    }
-    let holdingColor = ''
-    let changeSkillColor = ''
-    // console.log(categoriesTest)
-    
+  
     
     if(data){
      data.filter(myRepo => myRepo["fork"] === false)
@@ -23,21 +15,6 @@ function Cards({title,data,info, link, points,image, color, changePos, grid}){
       })
     }
 
-    // function colorOfSkill(name) {
-    //   name.map((info) => {
-    //     let language = info.language
-        
-    //     let categoriesKeys = ''
-    //     if(language != null){
-    //       categoriesKeys = Object.keys(categories);
-    //       console.log(categoriesKeys)
-    //     } 
-       
-    //   })
-    //   return holdingColor
-    // }
-    //   changeSkillColor = colorOfSkill(names)
-     
     
    
     if(points){
