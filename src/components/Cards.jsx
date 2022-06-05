@@ -33,8 +33,10 @@ function Cards({title,data,info, link, points,image, color, changePos, grid,hasD
           <Title color={holdingColor}>
             {info.name}
           </Title>
-          <p>{info.language}</p>
-          <p>{info.created_at}</p>
+          <RepoInfo>
+            {info.language}
+            {info.created_at}
+          </RepoInfo>
         </BoxContainer> 
         ) : 
         <BoxContainer>
@@ -59,6 +61,11 @@ const Title = styled.h1`
   text-align: center;
   color:${({color}) => color ? color : 'white'};
 `;
+
+const RepoInfo = styled.p`
+  font-size: 1.5em;
+  text-align: center;
+`
 
 
 const MainContainer = styled.div`

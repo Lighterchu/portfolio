@@ -1,5 +1,4 @@
 import React from 'react'
-import { Alert } from 'react-bootstrap';
 const PopUp = ({toggle}) => {
   const handleClick = () => {
    toggle();
