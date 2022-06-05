@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Cards({title,data,info, link, points,image, color, changePos, grid}){
+function Cards({title,data,info, link, points,image, color, changePos, grid,hasData }){
     let mainPoints
     let names = []
+    let holdingColor = ''
+    
     
   
     
@@ -16,6 +18,8 @@ function Cards({title,data,info, link, points,image, color, changePos, grid}){
     }
 
     
+    
+    
    
     if(points){
         mainPoints = points.map(point => <li>{point}</li>)
@@ -25,7 +29,7 @@ function Cards({title,data,info, link, points,image, color, changePos, grid}){
       <MainContainer changePos={changePos} grid={grid}>
         {data && data ?  names.map((info) => 
           <BoxContainer>
-          <Title>
+          <Title color={holdingColor}>
             {info.name}
           </Title>
           <p>{info.language}</p>
@@ -57,13 +61,16 @@ const Title = styled.h1`
 
 
 const MainContainer = styled.div`
-  width: 30%;
+  width: 90%;
   height:100% ;
   
   text-align:center;
   align-items: center;
 
-  display:${({grid}) => grid ? "grid" : ''};
+   
+  
+  display:${({grid}) => grid ? "grid" : 'flex'};
+  flex-wrap: wrap;
   grid-template-columns:repeat(4,1fr);
   grid-gap: 2rem;
   grid-template-rows: 200px 150px;
@@ -71,7 +78,7 @@ const MainContainer = styled.div`
   font-family: 'Times New Roman', Times, serif;
   font-size:20px;
 
-  margin-left:${({changePos}) => changePos ? "2%" : '34%'};
+  margin-left:${({changePos}) => changePos ? "2%" : '4%'};
   margin-top:2%;
   margin-bottom:2% ;
 `;
