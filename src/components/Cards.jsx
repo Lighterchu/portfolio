@@ -11,7 +11,8 @@ function Cards({title,data,info, link, points,image, color, changePos, grid,hasD
     
     if(data){
      data.filter(myRepo => myRepo["fork"] === false)
-      .map((info) => {
+      .map((info,key) => {
+        console.log(info)
         names.push(info)
         return data
       })
@@ -61,9 +62,8 @@ const Title = styled.h1`
 
 
 const MainContainer = styled.div`
-  width: 90%;
+  width: 30%;
   height:100% ;
-  
   text-align:center;
   align-items: center;
 
@@ -78,7 +78,7 @@ const MainContainer = styled.div`
   font-family: 'Times New Roman', Times, serif;
   font-size:20px;
 
-  margin-left:${({changePos}) => changePos ? "2%" : '4%'};
+  margin-left:${({changePos}) => changePos ? "2%" : '34%'};
   margin-top:2%;
   margin-bottom:2% ;
 `;
@@ -87,6 +87,7 @@ const BoxContainer = styled.div`
   width: 100%;
   height:100% ;
   
+  padding-top: 5%;
 
   color:white;
   background-color: #d00404a6;
