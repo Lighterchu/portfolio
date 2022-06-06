@@ -4,7 +4,7 @@ import About from './pages/About'
 import Home from './pages/Home'
 import Resume from './pages/Resume'
 import Projects from './pages/Projects'
-import { HashRouter as Router, Route, Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 
 function App() {
@@ -12,10 +12,10 @@ function App() {
     <Router>
       <NavgationBar/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="About" element={<About/>}/>
-        <Route path="Projects" element={<Projects/>}/>
-        <Route path="Resume" element={<Resume/>}/>
+        <Route path="portfolio/About" element={<About/>}/>
+        <Route path="portfolio/Home" element={<Home/>}/>
+        <Route path="portfolio/Projects" element={<Projects/>}/>
+        <Route path="portfolio/Resume" element={<Resume/>}/>
       </Routes>
     </Router>
   );
