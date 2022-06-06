@@ -3,10 +3,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar,Nav,Container} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 
-import About from './pages/About'
-import Home from './pages/Home'
-import Resume from './pages/Resume'
-import Projects from './pages/Projects'
+import About from '../pages/About'
+import Home from '../pages/Home'
+import Resume from '../pages/Resume'
+import Projects from '../pages/Projects'
 
 function NavgationBar() {
   
