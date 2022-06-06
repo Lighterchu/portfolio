@@ -9,13 +9,13 @@ function NavgationBar() {
   return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-      <Navbar.Brand href="/home">My Portfoilo</Navbar.Brand>
+      <Navbar.Brand href="/home.index.html">My Portfoilo</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/resume">Resume</Nav.Link>
-            <Nav.Link href="/projects">Projects</Nav.Link>
+            <Nav.Link href="/about.index.html">About</Nav.Link>
+            <Nav.Link href="/resume.index.html">Resume</Nav.Link>
+            <Nav.Link href="/projects.index.html">Projects</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
