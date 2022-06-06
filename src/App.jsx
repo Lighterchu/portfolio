@@ -13,9 +13,9 @@ function App() {
       <NavgationBar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/About" element={<About/>}/>
-        <Route path="/Projects" element={<Projects/>}/>
-        <Route path="/Resume" element={<Resume/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/projects" element={<Projects/>}/>
+        <Route path="/resume" element={<Resume/>}/>
       </Routes>
     </Router>
   );
