@@ -12,10 +12,10 @@ function App() {
     <Router>
       <NavgationBar/>
       <Routes>
-        <Route path="/About" element={<About/>}/>
-        <Route path="/Home" element={<Home/>}/>
-        <Route path="/Projects" element={<Projects/>}/>
-        <Route path="/Resume" element={<Resume/>}/>
+        <Route path="/https://lighterchu.github.io/About" element={<About/>}/>
+        <Route path="/https://lighterchu.github.io/Home" element={<Home/>}/>
+        <Route path="/https://lighterchu.github.io/Projects" element={<Projects/>}/>
+        <Route path="/https://lighterchu.github.io/Resume" element={<Resume/>}/>
       </Routes>
     </Router>
   );
