@@ -11,7 +11,7 @@ function NavgationBar() {
 
   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="/">My Portfoilo</Navbar.Brand>
+  <Navbar.Brand href="/home">My Portfoilo</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="me-auto">
