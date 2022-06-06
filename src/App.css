@@ -2,9 +2,7 @@
   text-align: center;
 }
 
-:root{
-  
-}
+
 
 body {
   --bs-body-bg: rgba(14, 12, 12, 0.637);
@@ -167,7 +165,7 @@ a:hover {
 .project-container {
   margin-top:2%;
   margin-left: 1%;
-  width: 95%;
+  width: 9%;
   height: 10%;
 
   border-radius: 25px;
