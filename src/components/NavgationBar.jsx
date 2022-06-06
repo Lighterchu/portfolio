@@ -12,7 +12,7 @@ function NavgationBar() {
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link href="/About">About</Nav.Link>
+        <Nav.Link href="https:lighterchu.github.io/About">About</Nav.Link>
         <Nav.Link href="/Resume">Resume</Nav.Link>
         <Nav.Link href="/Projects">Projects</Nav.Link>
       </Nav>
