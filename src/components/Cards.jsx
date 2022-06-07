@@ -35,6 +35,7 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
           </Title>
           <RepoInfo>
             {info.language}
+            <br/>
             {info.created_at}
           </RepoInfo>
         </BoxContainer> 
@@ -57,19 +58,19 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
 
 
 const Title = styled.h1`
-  font-size: 1.5em;
+  font-size: 0.8em;
   text-align: center;
   color:${({color}) => color ? color : 'white'};
 `;
 
 const RepoInfo = styled.p`
-  font-size: 1.5em;
+  font-size: 1.1;
   text-align: center;
 `
 
 
 const MainContainer = styled.div`
-  width: 30%;
+  width: 41vh;
   height:100% ;
   text-align:center;
   align-items: center;
@@ -78,9 +79,9 @@ const MainContainer = styled.div`
   
   display:${({grid}) => grid ? "grid" : 'flex'};
   flex-wrap: wrap;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(2,1fr);
   grid-gap: 2rem;
-  grid-template-rows: 200px 150px;
+  grid-template-rows: 10vh 40;
 
   font-family: 'Times New Roman', Times, serif;
   font-size:20px;
@@ -91,7 +92,8 @@ const MainContainer = styled.div`
 `;
 
 const BoxContainer = styled.div`
-  width: 100%;
+  position:relative;
+  width:100%;
   height:100% ;
   
   padding-top: 5%;
