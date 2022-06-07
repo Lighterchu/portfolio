@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Cards({title,data,info, link, points,image, color, changePos, grid,hasData }){
+export const Cards = ({title,data,info, link, points,image, color, changePos, grid,hasData }) => {
     let mainPoints
     let names = []
     let holdingColor = ''
@@ -53,7 +53,7 @@ function Cards({title,data,info, link, points,image, color, changePos, grid,hasD
     )
 }
 
-export default Cards
+
 
 
 const Title = styled.h1`

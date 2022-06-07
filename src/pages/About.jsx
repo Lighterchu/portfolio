@@ -1,7 +1,7 @@
 import React from 'react'
-import Cards from '../components/Cards';
+import {Cards} from '../components/Cards';
 
-function About() {
+export const About = () => {
   return (
     <div className="about-container">
         <Cards title={"Learning"} info={"I have been working on Front end projects and I am studying now to strength my skills to be come a Web Developer"}/>
@@ -12,4 +12,3 @@ function About() {
   )
 }
 
-export default About

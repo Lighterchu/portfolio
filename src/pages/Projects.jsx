@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import Cards from '../components/Cards';
+import {Cards} from '../components/Cards';
 
-function Projects() {
+export const Projects = () => {
 
   const [AllData, SetAllData] = useState('')
   const [hasData, SetHasData] = useState(false)
@@ -32,4 +32,3 @@ function Projects() {
   )
 }
 
-export default Projects

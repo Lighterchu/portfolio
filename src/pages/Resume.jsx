@@ -2,17 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-function Resume() {
-    return (
-      <Container>
-          <Title>
-              Resume
-          </Title>
-      </Container>
-    )
-  }
+export const Resume = () => {
+return (
+    <Container>
+        <Title>
+            Resume
+        </Title>
+    </Container>
+)
+}
   
-  export default Resume
+
 
 
 const Container = styled.div `

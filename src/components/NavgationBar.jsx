@@ -3,12 +3,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar,Nav,Container} from 'react-bootstrap'
 import { BrowserRouter as Router, Route, Routes,Link} from "react-router-dom";
 
-import About from '../pages/About'
-import Home from '../pages/Home'
-import Resume from '../pages/Resume'
-import Projects from '../pages/Projects'
-
-function NavgationBar() {
+import {About} from '../pages/About'
+import {Home} from '../pages/Home'
+import {Resume} from '../pages/Resume'
+import {Projects} from '../pages/Projects'
+   
+export const NavgationBar = () =>  {
   
   return (
   <Router>
@@ -41,4 +41,3 @@ function NavgationBar() {
   )
 }
 
-export default NavgationBar

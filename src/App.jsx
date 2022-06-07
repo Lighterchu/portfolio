@@ -1,5 +1,5 @@
 import './App.css';
-import NavgationBar from './components/NavgationBar';
+import {NavgationBar} from './components/NavgationBar';
 // import About from './pages/About'
 // import Home from './pages/Home'
 // import Resume from './pages/Resume'

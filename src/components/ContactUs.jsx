@@ -1,9 +1,9 @@
 import React, { useRef,useState} from 'react';
 import emailjs from '@emailjs/browser';
-import PopUp from '../components/PopUp';
+import {PopUp} from '../components/PopUp';
 
 
-const ContactUs = () => {
+export const ContactUs = () => {
   const form = useRef();
   const [Sent,SetSent] = useState(false)
 
@@ -42,4 +42,3 @@ const ContactUs = () => {
   
 };
 
-export default ContactUs

@@ -1,5 +1,5 @@
 import React from 'react'
-const PopUp = ({toggle}) => {
+export const PopUp = ({toggle}) => {
   const handleClick = () => {
    toggle();
   };
@@ -14,4 +14,3 @@ const PopUp = ({toggle}) => {
    </div>
   );
 }
-export default PopUp
