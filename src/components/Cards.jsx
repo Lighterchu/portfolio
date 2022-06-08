@@ -1,3 +1,4 @@
+import { render } from '@testing-library/react'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -37,6 +38,18 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
     // console.log(javaScript)
     // console.log(ahkhotKey)
     // console.log(lua)
+
+    let errorHanding = () => {
+      return  (
+      <BoxContainer>
+        <Title color={color}>
+          {title && title ? title : "LOADING..."}
+        </Title>
+        <p>{info}</p>
+        {points ? mainPoints : ""}
+      </BoxContainer>
+      )
+    }
     
     
    
@@ -57,15 +70,9 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
             {info.created_at}
           </RepoInfo>
         </BoxContainer> 
-        
+          
         ) : 
-        <BoxContainer>
-          <Title color={color}>
-            {title && title ? title : "LOADING..."}
-          </Title>
-          <p>{info}</p>
-          {points ? mainPoints : ""}
-        </BoxContainer>
+          errorHanding()
         }
       </MainContainer> 
     )

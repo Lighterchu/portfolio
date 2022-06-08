@@ -6,6 +6,8 @@ export const Projects = () => {
 
   const [AllData, SetAllData] = useState('')
   const [hasData, SetHasData] = useState(false)
+  const [isClicked, SetClicked] = useState(false)
+  
   
 
   
@@ -23,31 +25,41 @@ export const Projects = () => {
       SetHasData(false)
     })
   },[])
- 
+  
+  const clickHandler = () => SetClicked(isClicked => !isClicked);
+
 
   return (
     <div>
-      <ProjectContainers>
-        <h1>Web Development</h1>
-        <Cards data={AllData} changePos={true} grid={false} dataClear={hasData}/>
+      <ProjectContainers isClicked={isClicked} onClick={clickHandler}>
+      <ProjectCategoryTitle>Web Development</ProjectCategoryTitle>
+        <Cards data={AllData} changePos={true} dataClear={hasData}/>
       </ProjectContainers>
       <ProjectContainers>
-        <h1>Game Development</h1>
-        <Cards data={AllData} changePos={true} grid={false} dataClear={hasData}/>
+      <ProjectCategoryTitle>Game Development</ProjectCategoryTitle>
+        <Cards data={AllData} changePos={true} dataClear={hasData}/>
       </ProjectContainers>
       <ProjectContainers>
-        <h1>Work Projects</h1>
-        <Cards data={AllData} changePos={true} grid={false} dataClear={hasData}/>
+        <ProjectCategoryTitle>Work Projects</ProjectCategoryTitle>
+        <Cards data={AllData} changePos={true} dataClear={hasData}/>
       </ProjectContainers>
     </div>
   )
 }
+const ProjectCategoryTitle = styled.h1`
+  padding-left: 1%;
+  padding-top: 1%;
+  color: #e3f0e27a;
+`
+
 
 const ProjectContainers = styled.div`
-  margin-top:2%;
+  margin-top:1%;
   margin-left: 1%;
-  width: 70%;
-  height: 10%;
+  width: 98%;
+  /* height:60px;  */
+  height:${ (isClicked) => isClicked ? "200px" : "500px"};
+  
   overflow: scroll;
 
   border-radius: 25px;
