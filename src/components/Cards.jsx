@@ -5,6 +5,9 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
     let mainPoints
     let names = []
     let holdingColor = ''
+    let javaScript = []
+    let ahkhotKey = []
+    let lua = []
     
     
   
@@ -12,13 +15,28 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
     if(data){
      data.filter(myRepo => myRepo["fork"] === false)
       .map((info,key) => {
-        console.log(info)
         names.push(info)
+        if(info.language != null) {
+          let lowerCaseLang = info.language.toLowerCase()
+          switch(lowerCaseLang) {
+              case 'javascript':
+                javaScript.push(info.language)
+              break
+              case 'autohotkey':
+                ahkhotKey.push(info.language)
+              break
+              case 'lua':
+                lua.push(info.language)
+              break
+          }
+        }
         return data
       })
     }
 
-    
+    // console.log(javaScript)
+    // console.log(ahkhotKey)
+    // console.log(lua)
     
     
    
@@ -39,6 +57,7 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
             {info.created_at}
           </RepoInfo>
         </BoxContainer> 
+        
         ) : 
         <BoxContainer>
           <Title color={color}>
@@ -49,8 +68,6 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
         </BoxContainer>
         }
       </MainContainer> 
-
-
     )
 }
 
@@ -58,7 +75,7 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
 
 
 const Title = styled.h1`
-  font-size: 0.8em;
+  font-size: 1.2em;
   /* text-align: center; */
   color:${({color}) => color ? color : 'white'};
 `;
