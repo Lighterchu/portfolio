@@ -165,19 +165,12 @@ a:hover {
 .project-container {
   margin-top:2%;
   margin-left: 1%;
-  width: 520px; 
+  width: 70%;
   height: 10%;
+  overflow: scroll;
 
   border-radius: 25px;
   border: 2px solid #f1f6ea;
-
-  /* justify-content:space-between; */
   
-
-  /* text-align:center; */
-  /* display: flex;
-  flex-wrap: wrap; */
-  
-
   background-color:rgba(80, 76, 76, 0.585);
 }

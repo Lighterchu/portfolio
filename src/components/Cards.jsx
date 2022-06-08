@@ -29,8 +29,8 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
     return (
       <MainContainer changePos={changePos} grid={grid}>
         {data && data ?  names.map((info) => 
-          <BoxContainer>
-          <Title color={holdingColor}>
+        <BoxContainer>
+          <Title>
             {info.name}
           </Title>
           <RepoInfo>
@@ -59,29 +59,29 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
 
 const Title = styled.h1`
   font-size: 0.8em;
-  text-align: center;
+  /* text-align: center; */
   color:${({color}) => color ? color : 'white'};
 `;
 
 const RepoInfo = styled.p`
   font-size: 1.1;
-  text-align: center;
+  /* text-align: center; */
 `
 
 
 const MainContainer = styled.div`
-  width: 41vh;
+  width: 50%;
   height:100% ;
   text-align:center;
   align-items: center;
 
-   
+  
   
   display:${({grid}) => grid ? "grid" : 'flex'};
-  flex-wrap: wrap;
-  grid-template-columns:repeat(2,1fr);
-  grid-gap: 2rem;
-  grid-template-rows: 10vh 40;
+  grid-template-columns:33% 33% 33%;
+  column-gap: 20px;
+
+  
 
   font-family: 'Times New Roman', Times, serif;
   font-size:20px;
@@ -92,15 +92,15 @@ const MainContainer = styled.div`
 `;
 
 const BoxContainer = styled.div`
-  position:relative;
-  width:100%;
+  
+  width:70%;
   height:100% ;
   
-  padding-top: 5%;
-
+  padding-top: 2%;
+  
   color:white;
   background-color: #d00404a6;
-
+  
   border-radius: 25px;
   border: 2px solid #f1f6ea;
 

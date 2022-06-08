@@ -26,7 +26,7 @@ export const Projects = () => {
 
   return (
     <div className="project-container">
-      <Cards data={AllData} changePos={true} grid={true} dataClear={hasData}/>
+      <Cards data={AllData} changePos={true} grid={false} dataClear={hasData}/>
      
     </div>
   )
