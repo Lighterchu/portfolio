@@ -2,13 +2,10 @@ import { render } from '@testing-library/react'
 import React from 'react'
 import styled from 'styled-components'
 
-export const Cards = ({title,data,info, link, points,image, color, changePos, grid,hasData }) => {
+export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}) => {
     let mainPoints
     let names = []
-    let holdingColor = ''
-    let javaScript = []
-    let ahkhotKey = []
-    let lua = []
+   
     
     
   
@@ -17,20 +14,6 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
      data.filter(myRepo => myRepo["fork"] === false)
       .map((info,key) => {
         names.push(info)
-        if(info.language != null) {
-          let lowerCaseLang = info.language.toLowerCase()
-          switch(lowerCaseLang) {
-              case 'javascript':
-                javaScript.push(info.language)
-              break
-              case 'autohotkey':
-                ahkhotKey.push(info.language)
-              break
-              case 'lua':
-                lua.push(info.language)
-              break
-          }
-        }
         return data
       })
     }
@@ -39,7 +22,7 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
     // console.log(ahkhotKey)
     // console.log(lua)
 
-    let errorHanding = () => {
+    let ErrorHanding = () => {
       return  (
       <BoxContainer>
         <Title color={color}>
@@ -50,7 +33,71 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
       </BoxContainer>
       )
     }
+
+    let WebDev = (info) => {
+      console.log("this is working")
+      return (
+        <BoxContainer color={"purple"}>
+        <Title>
+          {info.name}
+        </Title>
+        <RepoInfo>
+          {info.language}
+          <br/>
+          {info.created_at}
+        </RepoInfo>
+      </BoxContainer> 
+      )
+    }
+
+    let GameDev = (info) => {
+      return (
+        <BoxContainer color={"blue"}>
+        <Title>
+          {info.name}
+        </Title>
+        <RepoInfo>
+          {info.language}
+          <br/>
+          {info.created_at}
+        </RepoInfo>
+      </BoxContainer> 
+      )
+    }
     
+    let OtherPros = (info) => {
+      return (
+        <BoxContainer color={"orange"}>
+        <Title>
+          {info.name}
+        </Title>
+        <RepoInfo>
+          {info.language}
+          <br/>
+          {info.created_at}
+        </RepoInfo>
+      </BoxContainer> 
+      )
+    }
+
+    
+    //showing the skills
+    let SkillSets = (info) => {
+      console.log(info.language)
+      //working out which catergorie to go in and handles the each card
+      if(Categorie === "Web Developement" && info.language === "JavaScript") {
+        return WebDev(info)
+      }
+      else if (Categorie === "Game Developement" && info.language === "Lua") {
+        return GameDev(info)
+      }
+      else if(Categorie === "Other Projects" && info.language === "AutoHotkey") {
+        return OtherPros(info)
+      }
+
+    }    
+
+   
     
    
     if(points){
@@ -60,19 +107,9 @@ export const Cards = ({title,data,info, link, points,image, color, changePos, gr
     return (
       <MainContainer changePos={changePos} grid={grid}>
         {data && data ?  names.map((info) => 
-        <BoxContainer>
-          <Title>
-            {info.name}
-          </Title>
-          <RepoInfo>
-            {info.language}
-            <br/>
-            {info.created_at}
-          </RepoInfo>
-        </BoxContainer> 
-          
+          SkillSets(info)
         ) : 
-          errorHanding()
+          ErrorHanding()
         }
       </MainContainer> 
     )
@@ -89,6 +126,7 @@ const Title = styled.h1`
 
 const RepoInfo = styled.p`
   font-size: 1.1;
+  
   /* text-align: center; */
 `
 
@@ -98,6 +136,7 @@ const MainContainer = styled.div`
   height:100% ;
   text-align:center;
   align-items: center;
+
 
   
   
@@ -123,7 +162,8 @@ const BoxContainer = styled.div`
   padding-top: 2%;
   
   color:white;
-  background-color: #d00404a6;
+  /* background-color: #d00404a6; */
+  background-color:${({color}) => color ? color : '#d00404a6;'};
   
   border-radius: 25px;
   border: 2px solid #f1f6ea;

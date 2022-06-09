@@ -6,7 +6,7 @@ export const Projects = () => {
 
   const [AllData, SetAllData] = useState('')
   const [hasData, SetHasData] = useState(false)
-  const [isClicked, SetClicked] = useState(false)
+ 
   
   
 
@@ -26,23 +26,22 @@ export const Projects = () => {
     })
   },[])
   
-  const clickHandler = () => SetClicked(isClicked => !isClicked);
-
+ 
 
   return (
     <div>
-      <ProjectContainers isClicked={isClicked} onClick={clickHandler}>
+      <ProjectContainers>
       <ProjectCategoryTitle>Web Development</ProjectCategoryTitle>
-        <Cards data={AllData} changePos={true} dataClear={hasData}/>
+        <Cards data={AllData} changePos={true} dataClear={hasData} Categorie={"Web Developement"}/>
       </ProjectContainers>
       <ProjectContainers>
       <ProjectCategoryTitle>Game Development</ProjectCategoryTitle>
-        <Cards data={AllData} changePos={true} dataClear={hasData}/>
+        <Cards data={AllData} changePos={true} dataClear={hasData} Categorie={"Game Developement"}/>
       </ProjectContainers>
       <ProjectContainers>
         <ProjectCategoryTitle>Work Projects</ProjectCategoryTitle>
-        <Cards data={AllData} changePos={true} dataClear={hasData}/>
-      </ProjectContainers>
+        <Cards data={AllData} changePos={true} dataClear={hasData} Categorie={"Other Projects"}/>
+      </ProjectContainers> 
     </div>
   )
 }
@@ -58,7 +57,7 @@ const ProjectContainers = styled.div`
   margin-left: 1%;
   width: 98%;
   /* height:60px;  */
-  height:${ (isClicked) => isClicked ? "200px" : "500px"};
+  height:${ (clicked) => clicked ? "200px" : "500px"};
   
   overflow: scroll;
 
