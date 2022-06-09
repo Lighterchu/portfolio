@@ -35,34 +35,52 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
     }
 
     let WebDev = (info) => {
-      console.log("this is working")
-      return (
-        <BoxContainer color={"purple"}>
-        <Title>
-          {info.name}
-        </Title>
-        <RepoInfo>
-          {info.language}
-          <br/>
-          {info.created_at}
-        </RepoInfo>
-      </BoxContainer> 
-      )
+      console.log(info)
+      if(Categorie === "Web Developement" && info.language === "JavaScript"){
+        return (
+          <BoxContainer color={"purple"}>
+          <Title>
+            {info.name}
+          </Title>
+          <RepoInfo>
+            {info.language}
+            <br/>
+            {info.created_at}
+          </RepoInfo>
+        </BoxContainer> 
+        )
+        }
     }
 
     let GameDev = (info) => {
-      return (
-        <BoxContainer color={"blue"}>
-        <Title>
-          {info.name}
-        </Title>
-        <RepoInfo>
-          {info.language}
-          <br/>
-          {info.created_at}
-        </RepoInfo>
-      </BoxContainer> 
-      )
+      if(Categorie === "Game Development" && info.language === "Lua"){
+        console.log("this is the CSS")
+          return (
+          <BoxContainer color={"blue"}>
+            <Title>
+              {info.name}
+            </Title>
+            <RepoInfo>
+              {info.language}
+              <br/>
+              {info.created_at}
+            </RepoInfo>
+          </BoxContainer> 
+          )
+        }else{
+          return (
+            <BoxContainer color={"blue"}>
+              <Title>
+                {info.name}
+              </Title>
+              <RepoInfo>
+                {"Lua"}
+                <br/>
+                {info.created_at}
+              </RepoInfo>
+            </BoxContainer> 
+            )
+        }
     }
     
     let OtherPros = (info) => {
@@ -83,15 +101,17 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
     
     //showing the skills
     let SkillSets = (info) => {
-      console.log(info.language)
       //working out which catergorie to go in and handles the each card
       if(Categorie === "Web Developement" && info.language === "JavaScript") {
         return WebDev(info)
       }
-      else if (Categorie === "Game Developement" && info.language === "Lua") {
+      if (Categorie === "Game Developement" && info.language === "Lua" ) {
         return GameDev(info)
       }
-      else if(Categorie === "Other Projects" && info.language === "AutoHotkey") {
+      if(Categorie === "Game Developement" && info.language === "CSS"){
+        return GameDev(info)
+      }
+      if(Categorie === "Other Projects" && info.language === "AutoHotkey") {
         return OtherPros(info)
       }
 
