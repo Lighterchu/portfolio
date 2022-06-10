@@ -5,8 +5,6 @@ import styled from 'styled-components'
 export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}) => {
     let mainPoints
     let names = []
-   
-    
     
   
     
@@ -54,8 +52,7 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
 
     let GameDev = (info) => {
       if(Categorie === "Game Development" && info.language === "Lua"){
-        console.log("this is the CSS")
-          return (
+        return (
           <BoxContainer color={"blue"}>
             <Title>
               {info.name}
@@ -152,7 +149,9 @@ const RepoInfo = styled.p`
 
 
 const MainContainer = styled.div`
-  width: 50%;
+ // width: 90%;
+  width:90%;
+  
   height:100% ;
   text-align:center;
   align-items: center;
@@ -169,7 +168,7 @@ const MainContainer = styled.div`
   font-family: 'Times New Roman', Times, serif;
   font-size:20px;
 
-  margin-left:${({changePos}) => changePos ? "2%" : '34%'};
+  margin-left:${({changePos}) => changePos ? "3%" : '16%'};
   margin-top:2%;
   margin-bottom:2% ;
 `;

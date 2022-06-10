@@ -13,7 +13,7 @@ export const Projects = () => {
   
  
   useEffect(() => {
-    fetch("https://api.github.com/users/Lighterchu/repos?per_page=200")
+    fetch("https://api.github.com/users/Lighterchu/repos?per_page=300")
     .then(res => res.json())
     .then(data => {
       SetAllData(data)
@@ -26,8 +26,6 @@ export const Projects = () => {
     })
   },[])
   
- 
-
   return (
     <div>
       <ProjectContainers>
