@@ -106,7 +106,7 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
       if(Categorie === "Web Developement" && info.language === "JavaScript") {
         return WebDev(info,repoLink)
       }
-      if(Categorie === "Web Developement" && info.language === "Ruby") {
+      if(Categorie === "Web Developement" && info.language === "JavaScript") {
         return WebDev(info,repoLink)
       }
       if (Categorie === "Game Developement" && info.language === "Lua" ) {
