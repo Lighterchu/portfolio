@@ -23,16 +23,16 @@ export const ContactUs = () => {
     <div>
       {Sent ?  <PopUp toggle={SetSent}/> : ""}
       <form ref={form} className={"contact-container"} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input type="text" name="user_name" />
+        <label className="contact-lables">Name</label>
+        <input type="text" name="user_name"/>
         <br/>
         <br/>
-        <label>Email</label>
+        <label className="contact-lables">Email</label>
         <input type="email" name="user_email" />
         <br/>
         <div className="message-container">
-          <label>Message</label>
-          <textarea name="message" />
+          <label >Message</label>
+          <textarea name="message" id='message-box' />
         </div>
         <input type="submit" id="sendBtn" value="Send" href="#test" />
       </form>

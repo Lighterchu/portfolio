@@ -32,7 +32,7 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
       )
     }
 
-    let WebDev = (info) => {
+    let WebDev = (info,link) => {
       console.log(info)
       if(Categorie === "Web Developement" && info.language === "JavaScript"){
         return (
@@ -42,6 +42,8 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
           </Title>
           <RepoInfo>
             {info.language}
+            <br/>
+            <button>{link}</button>
             <br/>
             {info.created_at}
           </RepoInfo>
@@ -98,18 +100,23 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
     
     //showing the skills
     let SkillSets = (info) => {
+      let repoLink = info.svn_url
+      console.log("grabbing rep link",info)
       //working out which catergorie to go in and handles the each card
       if(Categorie === "Web Developement" && info.language === "JavaScript") {
-        return WebDev(info)
+        return WebDev(info,repoLink)
+      }
+      if(Categorie === "Web Developement" && info.language === "Ruby") {
+        return WebDev(info,repoLink)
       }
       if (Categorie === "Game Developement" && info.language === "Lua" ) {
-        return GameDev(info)
+        return GameDev(info,repoLink)
       }
       if(Categorie === "Game Developement" && info.language === "CSS"){
-        return GameDev(info)
+        return GameDev(info,repoLink)
       }
       if(Categorie === "Other Projects" && info.language === "AutoHotkey") {
-        return OtherPros(info)
+        return OtherPros(info,repoLink)
       }
 
     }    
