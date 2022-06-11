@@ -100,13 +100,14 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
     
     //showing the skills
     let SkillSets = (info) => {
+      console.log(info)
       let repoLink = info.svn_url
-      console.log("grabbing rep link",info)
+      // console.log("grabbing rep link",info)
       //working out which catergorie to go in and handles the each card
       if(Categorie === "Web Developement" && info.language === "JavaScript") {
         return WebDev(info,repoLink)
       }
-      if(Categorie === "Web Developement" && info.language === "JavaScript") {
+      if(Categorie === "Web Developement" && info.language === "Ruby") {
         return WebDev(info,repoLink)
       }
       if (Categorie === "Game Developement" && info.language === "Lua" ) {
