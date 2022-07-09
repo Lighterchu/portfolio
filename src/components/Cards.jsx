@@ -1,8 +1,18 @@
-import { render } from '@testing-library/react'
 import React from 'react'
 import styled from 'styled-components'
+import 'bootstrap/dist/css/bootstrap.css';
+import {Button} from 'react-bootstrap'
 
-export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}) => {
+export const Cards = (
+    {title,
+    data,
+    info,
+    points,
+    color, 
+    changePos, 
+    grid, 
+    Categorie
+    }) => {
     let mainPoints
     let names = []
     
@@ -32,27 +42,33 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
       )
     }
 
+    let handleExternalsLink = (link) => {
+      
+    }
+
     let WebDev = (info,link) => {
       console.log(info)
       if(Categorie === "Web Developement" && info.language === "JavaScript"){
         return (
-          <BoxContainer color={"purple"}>
+          <BoxContainer color={"purple"} changeSize={"10"}>
           <Title>
             {info.name}
           </Title>
           <RepoInfo>
             {info.language}
             <br/>
-            <button>{link}</button>
+            {/* <button>{link}</button> */}
             <br/>
             {info.created_at}
+            <br/>
+            <Button variant="success" href={link}>Source Code</Button>
           </RepoInfo>
         </BoxContainer> 
         )
         }
     }
 
-    let GameDev = (info) => {
+    let GameDev = (info,link) => {
       if(Categorie === "Game Development" && info.language === "Lua"){
         return (
           <BoxContainer color={"blue"}>
@@ -63,6 +79,8 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
               {info.language}
               <br/>
               {info.created_at}
+              <br/>
+              <Button variant="success" href={link}>Source Code</Button>
             </RepoInfo>
           </BoxContainer> 
           )
@@ -76,13 +94,15 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
                 {"Lua"}
                 <br/>
                 {info.created_at}
+                <br/>
+                <Button variant="success" href={link}>Source Code</Button>
               </RepoInfo>
             </BoxContainer> 
             )
         }
     }
     
-    let OtherPros = (info) => {
+    let OtherPros = (info,link) => {
       return (
         <BoxContainer color={"orange"}>
         <Title>
@@ -92,6 +112,8 @@ export const Cards = ({title,data,info,points,color, changePos, grid, Categorie}
           {info.language}
           <br/>
           {info.created_at}
+          <br/>
+          <Button variant="success" href={link}>Source Code</Button>
         </RepoInfo>
       </BoxContainer> 
       )
@@ -160,6 +182,7 @@ const MainContainer = styled.div`
  // width: 90%;
   width:90%;
   
+  
   height:100% ;
   text-align:center;
   align-items: center;
@@ -183,8 +206,10 @@ const MainContainer = styled.div`
 
 const BoxContainer = styled.div`
   
-  width:70%;
-  height:100% ;
+  /* width:70%; */
+  width:${({changeSize}) => changeSize ? changeSize : '70%'};
+
+  height:100%; 
   
   padding-top: 2%;
   

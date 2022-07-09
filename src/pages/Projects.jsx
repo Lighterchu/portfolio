@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Cards} from '../components/Cards';
 import styled from 'styled-components'
 
-export const Projects = () => {
+export const Projects = ({link}) => {
 
   const [AllData, SetAllData] = useState('')
   const [hasData, SetHasData] = useState(false)
@@ -55,7 +55,7 @@ const ProjectContainers = styled.div`
   margin-left: 1%;
   width: 98%;
   /* height:60px;  */
-  height:${ (clicked) => clicked ? "200px" : "500px"};
+  /* height:${ (clicked) => clicked ? "200px" : "500px"}; */
   
   overflow: scroll;
 

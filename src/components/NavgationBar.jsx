@@ -31,7 +31,16 @@ export const NavgationBar = () =>  {
           <Route path="/about" element={<About/>}></Route>
           <Route path="/resume" element={<Resume/>}></Route>
           <Route path="/projects" element={<Projects/>}></Route>
-          <Route path="/*" element={<Home/>}></Route>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="*" element={
+            <div>
+              <h2>ERROR 404 </h2>
+              <p>Ooops, that is ok these things happen.</p>
+              <p>Justmeans this page is not here</p>
+
+            </div>
+          }></Route>
+
         </Routes>
     </div>
   </div>
