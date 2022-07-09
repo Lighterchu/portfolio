@@ -28,9 +28,9 @@ export const NavgationBar = () =>  {
       </Navbar>
       <div>
         <Routes>
-          <Route path="/about" element={<About/>}></Route>
-          <Route path="/resume" element={<Resume/>}></Route>
-          <Route path="/projects" element={<Projects/>}></Route>
+          <Route path="portfoilo/about" element={<About/>}></Route>
+          <Route path="portfoilo/resume" element={<Resume/>}></Route>
+          <Route path="portfoilo/projects" element={<Projects/>}></Route>
           <Route path="/*" element={<Home/>}></Route>
         </Routes>
     </div>
