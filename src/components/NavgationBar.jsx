@@ -31,7 +31,7 @@ export const NavgationBar = () =>  {
           <Route path="portfolio/about" element={<About/>}></Route>
           <Route path="portfolio/resume" element={<Resume/>}></Route>
           <Route path="portfolio/projects" element={<Projects/>}></Route>
-          <Route path="/*" element={<Home/>}></Route>
+          <Route path="/portfolio" element={<Home/>}></Route>
         </Routes>
     </div>
   </div>
