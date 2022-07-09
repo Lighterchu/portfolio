@@ -19,9 +19,9 @@ export const NavgationBar = () =>  {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
-              <Nav.Link as={Link} to={"/resume"}>Resume</Nav.Link>
-              <Nav.Link as={Link} to={"/projects"}>Projects</Nav.Link>
+              <Nav.Link as={Link} to={"portfoilo/about"}>About</Nav.Link>
+              <Nav.Link as={Link} to={"portfoilo/resume"}>Resume</Nav.Link>
+              <Nav.Link as={Link} to={"portfoilo/projects"}>Projects</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
