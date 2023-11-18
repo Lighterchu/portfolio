@@ -15,12 +15,12 @@ export const NavgationBar = () =>  {
   <div>
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-        <Navbar.Brand  as={Link} to={"/"} >My Portfoilo</Navbar.Brand>
+        <Navbar.Brand  as={Link} to={"/portfolio"} >My Portfoilo</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link as={Link} to={"portfolio/about"}>About</Nav.Link>
-              <Nav.Link as={Link} to={"portfolio/resume"}>Resume</Nav.Link>
+              {/* <Nav.Link as={Link} to={"portfolio/resume"}>Resume</Nav.Link> */}
               <Nav.Link as={Link} to={"portfolio/projects"}>Projects</Nav.Link>
             </Nav>
           </Navbar.Collapse>

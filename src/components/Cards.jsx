@@ -15,6 +15,7 @@ export const Cards = (
     }) => {
     let mainPoints
     let names = []
+    let hasPages = false
     
   
     
@@ -48,6 +49,10 @@ export const Cards = (
 
     let WebDev = (info,link) => {
       console.log(info)
+      if(info["has_pages"]){
+        info.hasPages = true;
+
+      }
       if(Categorie === "Web Developement" && info.language === "JavaScript"){
         return (
           <BoxContainer color={"purple"} changeSize={"10"}>
@@ -59,9 +64,11 @@ export const Cards = (
             <br/>
             {/* <button>{link}</button> */}
             <br/>
-            {info.created_at}
+            {/* {info.created_at} */}
             <br/>
-            <Button variant="success" href={link}>Source Code</Button>
+            <div>
+              {info.hasPages ? <Button variant="success" href={`https://lighterchu.github.io/${info.name}/`}>View Website</Button> : <div></div> }
+            </div>
           </RepoInfo>
         </BoxContainer> 
         )
@@ -122,7 +129,6 @@ export const Cards = (
     
     //showing the skills
     let SkillSets = (info) => {
-      console.log(info)
       let repoLink = info.svn_url
       // console.log("grabbing rep link",info)
       //working out which catergorie to go in and handles the each card
@@ -212,6 +218,7 @@ const BoxContainer = styled.div`
   height:100%; 
   
   padding-top: 2%;
+  padding-bottom: 20px;
   
   color:white;
   /* background-color: #d00404a6; */

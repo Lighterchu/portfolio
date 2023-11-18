@@ -6,6 +6,7 @@ export const Projects = ({link}) => {
 
   const [AllData, SetAllData] = useState('')
   const [hasData, SetHasData] = useState(false)
+  const [apiCalled, setApiCalled] = useState(false);
  
   
   
@@ -13,7 +14,7 @@ export const Projects = ({link}) => {
   
  
   useEffect(() => {
-    fetch("https://api.github.com/users/Lighterchu/repos?per_page=300")
+    fetch("https://api.github.com/users/Lighterchu/repos?per_page=600")
     .then(res => res.json())
     .then(data => {
       SetAllData(data)
